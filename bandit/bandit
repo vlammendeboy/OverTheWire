@@ -1,0 +1,238 @@
+Bandit - Over The Wire
+Level 1:
+  Commands:
+    cat readme
+  Extra:
+    Password: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+Level 2:
+  Commands:
+    cat ./-
+  Extra:
+    Password: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+Level 3:
+  Commands:
+    cat ./--spaces\ in\ this\ filename--
+  Extra:
+    Password: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+Level 4:
+  Commands:
+    cat inhere/...Hiding-From-You
+  Extra:
+    Password: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+Level 5:
+  Commands:
+    cd inhere/
+    file ./-file0x <x is an integer between 0 and 7>
+    cat ./-file07
+  Extra:
+    Password: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+Level 6:
+  Commands:
+    cd inhere/
+    find ./ -readable -size 1033c ! -executable
+    cat ./maybehere07/.file2
+  Extra:
+    Password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+Level 7:
+  Commands:
+    find / -user bandit7 -group bandit6 -size 33c
+    cat /var/lib/dpkg/info/bandit7.password
+  Extra:
+    Password: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+Level 8:
+  Commands:
+    grep millionth data.txt
+  Extra:
+    Password: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+Level 9:
+  Commands:
+    cat data.txt | sort | uniq -c | grep '1 '
+  Extra:
+    Password: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+Level 10:
+  Commands:
+     strings data.txt | grep -E "==+"
+  Extra:
+     ========== the
+    ========== password
+    ========== is
+    ========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+    Password: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+Level 11:
+  Commands:
+    base64 -d data.txt
+  Extra:
+    Password: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+Level 12:
+  Commands:
+    cat data.txt | tr 'abcdefghijklmnopqrstuvwxyz' 'nopqrstuvwxyzabcdefghijklm' | tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' 'NOPQRSTUVWXYZABCDEFGHIJKLM'
+    # Way better and easier
+    tr 'a-zA-Z' 'n-za-mN-ZA-M' < data.txt
+  Extra:
+    Password: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+Level 13:
+  Commands:
+    mktemp -d <nameXXXXXX> --> changes X to random value
+    gzip -dc <filename> > file
+    bzip2 -d <filename>
+    tar -xvf <filename>
+  Extra:
+    Password: FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+Level 14:
+  Commands:
+    cat sshkey.private
+    chmod 700 bandit14.key
+    scp -P 2220 -i bandit14.key bandit14@bandit.labs.overthewire.org:/etc/bandit_pass/bandit14 ./bandit14
+    cat bandit14
+  Extra:
+    Password: MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+Level 15:
+  Commands:
+    nc localhost 30000
+    <paste in the password>
+  Extra:
+    Password: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+Level 16:
+  Commands:
+    echo "8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo" | ncat --ssl localhost 30001
+  Extra:
+    Password: kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+Level 17:
+  Commands:
+    echo "kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx" | ncat --ssl localhost 31790
+    # this gave an private ssh key
+    nano bandit17.key
+    <paste in the key>
+    ssh bandit.labs.overthewire.org -i bandit17.key -l bandit17 -p 2220
+    cat /etc/bandit_pass/bandit17
+  Extra:
+    Password: EReVavePLFHtFlFsjn3hyzMlvSuSAcRD
+Level 18:
+  Commands:
+    diff passwords.old passwords.new
+  Extra:
+    Password: x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+Level 19:
+  Commands:
+    ssh bandit.labs.overthewire.org -l bandit18 -p 2220 "cat readme"
+  Extra:
+    Password: cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+Level 20:
+  Commands:
+    ./bandit20-do cat /etc/bandit_pass/bandit20
+  Extra:
+    Password: 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+Level 21:
+  Commands:
+    echo "0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO" | nc -l -p 1234 &
+    ./suconnect 1234
+  Extra:
+    Password: EeoULMCra2q0dSkYj561DX7s1CpBuOBt
+Level 22:
+  Commands:
+    ls /etc/crond.d/
+    cat /etc/crond.d/cronjob_bandit22
+    cat /usr/bin/cronjob_bandit22.sh
+    cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+  Extra:
+    Password: tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
+Level 23:
+  Commands:
+    ls /etc/crond.d/
+    cat /etc/crond.d/cronjob_bandit23
+    cat /usr/bin/cronjob_bandit23.sh
+    whoami
+    echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+    cat /tmp/8169b67bd894ddbb4412f91573b38db3
+  Extra:
+    Password: 0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
+Level 24:
+  Script:
+    #!/bin/bash
+    cat /etc/bandit_pass/bandit24 > /tmp/bandit24_pw
+  Commands:
+    nano /tmp/script.sh
+    chmod +x /tmp/script.sh
+    cp /tmp/script.sh
+    /var/spool/bandit24/foo/script.sh
+    cat /tmp/bandit24_pw
+  Extra:
+    Password: gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
+Level 25:
+  Commands:
+    for i in {0000..9999}; do echo "gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 $i"; done | nc localhost 30002 | grep -v "Wrong"   
+  Extra:
+    Password: iCi86ttT4KSNe1armKiwbQNmB3YJP3q4
+Level 26:
+  Commands:
+    cat bandit26.sshkey
+    # copy the key to a file and set permissions to 600
+    chmod 600 bandit26.key
+    # make terminal window smaller
+    ssh bandit.labs.overthewire.org -l bandit26 -p 2220 -i bandit26.key
+    # press v to enter vi mode, then enter :set shell=/bin/bash and press enter, then enter :shell and press enter, then cat /etc/bandit_pass/bandit26
+  Extra:
+    Password: s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ
+Level 27:
+  Commands:
+    same as level 26
+    ls
+    ./bandit27-do cat /etc/bandit_pass/bandit27
+  Extra:
+    Password: upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB
+Level 28:
+  Commands:
+    git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo
+  Extra:
+    Password: Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
+Level 29:
+  Commands:
+    git clone ssh://bandit28-git@bandit.labs.overthewire.org:2220/home/bandit28-git/repo
+    git log
+    git checkout 0147528a5371a119f7e0f8b6b2be25b727b70cde
+    cat README.md
+  Extra:
+    Password: 4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7
+Level 30:
+  Commands:
+    git clone ssh://bandit29-git@bandit.labs.overthewire.org:2220/home/bandit29-git/repo
+    git branch -a
+    git switch dev
+    cat README.md
+  Extra:
+    Password: qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL
+Level 31:
+  Commands:
+    git clone ssh://bandit30-git@bandit.labs.overthewire.org:2220/home/bandit30-git/repo
+    git tag
+    git show secret
+  Extra:
+    Password: fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy
+Level 32:
+  Commands:
+    git clone ssh://bandit31-git@bandit.labs.overthewire.org:2220/home/bandit31-git/repo
+    cat README.md
+    echo 'May I come in?' > key.txt
+    git add -f key.txt
+    git commit -m "push key"
+    git push
+  Extra:
+    Password: 3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
+Level 33:
+  Commands:
+    ssh bandit.labs.overthewire.org -l bandit32 -p 2220
+    $0
+    whoami
+    cat /etc/bandit_pass/bandit33
+  Extra:
+    Password: tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0
+After logging in to bandit 33 and entering 'cat README.txt':
+
+Congratulations on solving the last level of this game!
+
+At this moment, there are no more levels to play in this game. However, we are constantly working
+on new levels and will most likely expand this game with more levels soon.
+Keep an eye out for an announcement on our usual communication channels!
+In the meantime, you could play some of our other wargames.
+
+If you have an idea for an awesome new level, please let us know!
